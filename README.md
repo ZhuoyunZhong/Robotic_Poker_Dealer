@@ -1,4 +1,4 @@
-# SDealer ODealing
+# Robotic Texas Hold'em Dealer
 
 This project is to develop a card dealing robot arm for a Texas Hold'em game. The basic rule of the game can be viewed on [Wikipedia Texas Hold'em](https://en.wikipedia.org/wiki/Texas_hold_%27em).
 
