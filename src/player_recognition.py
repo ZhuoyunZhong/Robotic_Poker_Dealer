@@ -30,4 +30,3 @@ if __name__ == "__main__":
         print(location)
         plt.imshow(img[location[0]:location[2],location[3]:location[1],:])
         plt.show()
-    

@@ -5,6 +5,7 @@ from areas_determination import det_areas
 from s_dealer.srv import StartGameFlag, StartGameFlagResponse
 
 import numpy as np
+import rospy
 
 
 # Game Procedure
@@ -17,6 +18,7 @@ def handle_game(req):
     
     # Determine number of players
     rbg_image = np.array()
+    d_image = np.array()
     num, loc = face_rec(rbg_image)
     if num < 2:
         print("Sure, your biggest rival should be yourself!")
