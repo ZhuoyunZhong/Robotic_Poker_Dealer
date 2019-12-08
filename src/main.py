@@ -19,8 +19,8 @@ def handle_game(req):
     # Determine number of players
     rbg_image = np.array()
     d_image = np.array()
-    num, loc = face_rec(rbg_image)
-    if num < 2:
+    loc = face_rec(rbg_image)
+    if len(loc) < 2:
         print("Sure, your biggest rival should be yourself!")
         return StartGameFlagResponse("Not enough players")
 
