@@ -193,11 +193,13 @@ def det_areas(rgb_image, pc2, loc):
 
 if __name__ == "__main__":
     from player_recognition import face_rec
+    import os
 
     # load image
-    rbg_image_path = "test_rgb.jpg"
+    rbg_image_path = os.path.join(os.path.dirname(__file__),"../data/test_rgb.jpg")
     rbg_image = mpimg.imread(rbg_image_path)
-    pc2 = pcl.load("test.pcd")
+    pcl_path = os.path.join(os.path.dirname(__file__),"../data/test.pcd")
+    pc2 = pcl.load(pcl_path)
 
     # detect areas
     loc = face_rec(rbg_image)

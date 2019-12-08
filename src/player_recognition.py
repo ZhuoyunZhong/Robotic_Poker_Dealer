@@ -16,8 +16,9 @@ def face_rec(np_image):
 
 
 if __name__ == "__main__":
+    import os
     # test image path
-    image_path = "../data/test_rgb.jpg"
+    image_path = os.path.join(os.path.dirname(__file__),"../data/test_rgb.jpg")
 
     # calculate number of players
     image = face_recognition.load_image_file(image_path)
