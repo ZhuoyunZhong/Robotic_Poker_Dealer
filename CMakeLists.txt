@@ -61,6 +61,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
   FILES
   StartGameFlag.srv
+  GetInstruction.srv
 #   Service2.srv
 )
 

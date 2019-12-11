@@ -1,3 +1,2 @@
-bool start
 ---
 std_msgs/String end_message
