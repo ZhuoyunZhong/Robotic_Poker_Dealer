@@ -22,13 +22,17 @@ ABB IRB 1600 1.45m
 
 #### Installation
 
-Kinect API
+**Kinect API**
 
 `sudo apt-get install ros-kinetic-openni-camera`
 
 `sudo apt-get install ros-kinetic-openni-launch`
 
-[Facial Recognition Library](https://github.com/ageitgey/face_recognition)
+**NITE and openni_tracker**
+
+As openni_tracker does not officially support ROS kinetic, a tutorial of how to install openni_tracker and its dependencies can be found on [OpenNI Kinect Installation](https://www.reddit.com/r/ROS/comments/6qejy0/openni_kinect_installation_on_kinetic_indigo/).
+
+**[Facial Recognition Library](https://github.com/ageitgey/face_recognition)**
 
 Install dlib and python libraries following [Installing dlib](https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf)
 
@@ -39,16 +43,26 @@ Install Face recognition by
 #### Build Instructions
 
 - Clone this repository.
+
 - Make a build directory: catkin_make
+
 - Run by
 
-launch kinect
+  launch Kinect
 
-`roslaunch openni_launch openni.launch depth_registration:=true`
+  `roslaunch openni_launch openni.launch depth_registration:=true`
 
-others
+  open Kinect skeleton tracker
 
-`roslaunch SDealer TODO.launch`
+  `rosrun openni_tracker openni_tracker`
+
+  launch all other nodes
+
+  `roslaunch s_dealer TODO.launch`
+
+  start rviz to visualize results 
+
+  `rosrun rviz rviz`
 
 ## Procedure Detail
 
