@@ -70,7 +70,7 @@ Install Face recognition by
 
 This project uses [Facial Recognition Library](https://github.com/ageitgey/face_recognition). It is a convenient and powerful library using [dlib](http://dlib.net/)'s state-of-the-art face recognition built with deep learning.
 
-TODO...
+
 
 #### Player Area Detection
 

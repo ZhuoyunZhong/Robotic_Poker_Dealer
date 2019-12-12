@@ -22,7 +22,7 @@ port = 55000
 client = socket.socket()
 client.connect((host, port))
 
-
+'''
 # Acqurie Value
 def get_loc():
     # Get image
@@ -41,20 +41,16 @@ def get_loc():
     p.from_list(pc_list)
 
     # Perform Facial Recognition
-    print "Start Facial Recognition"
     loc = face_rec(rbg_image)
-    '''
-    if len(loc) < 2:
-        print "There is only", len(loc), "player."
-        return StartGameFlagResponse("Not enough players")'''
+    print(len(loc))
 
     # Determine players area
-    print "Start Players Area Detection"
     players_info = det_areas(rbg_image, p, loc)
+    print(players_info)
 
     player_message = str("")
     for player in players_info:
-        player_message += str(player[0])+","+str(player[1])+";"
+        player_message += str(player[0])+","+str(player[1])+","
     return player_message
 
 
@@ -67,15 +63,18 @@ def get_ins():
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
 
+    if result != 0:
+        print(result)
+
     return str(result)
 
 '''
 # Test Value
 def get_loc():
-    return "0,0.37263497904614834;0,0.9886415550523182;1,0.40263497904614834;"
+    return "0,0.37263497904614834,0,0.9886415550523182,1,0.40263497904614834,"
 def get_ins():
     return "0"
-'''
+
 
 # Communicating with server
 while True:
