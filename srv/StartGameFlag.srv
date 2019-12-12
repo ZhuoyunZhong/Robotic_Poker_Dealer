@@ -1,2 +1,2 @@
 ---
-std_msgs/String end_message
+string end_message
