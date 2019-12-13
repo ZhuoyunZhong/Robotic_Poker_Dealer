@@ -76,7 +76,7 @@ This project uses [Facial Recognition Library](https://github.com/ageitgey/face_
 
 The location can be transformed as indices of the images. The area detection node could use the same indices to extract players' face coordinates from the point clouds provided by Kinect. Also, the area detection node performed a plane detection to find the location of the table. As long as the corners of the table are obtained, a homogeneous matrix transforming points from camera coordinate to table coordinate can be computed, and the players location in the camera coordinates can be transformed to that with respect to table coordinate. 
 
-![test_facial](demonstration/area.png)
+![test_facial](demonstration/pc.png)
 
 With the use of facial recognition and player area detection, we could know how many players are going to play and where to deal the players' cards.
 
