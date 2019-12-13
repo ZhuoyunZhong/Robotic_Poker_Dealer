@@ -11,7 +11,7 @@ from stereo_msgs.msg import DisparityImage
 def cb_rgb(image_message):
     bridge = CvBridge()
     cv_image = bridge.imgmsg_to_cv2(image_message, desired_encoding="passthrough")
-    cv2.imwrite("test_rpg.jpg", cv_image)
+    cv2.imwrite("test_rgb.jpg", cv_image)
 
 
 def cb_depth(image_message):

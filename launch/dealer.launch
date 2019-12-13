@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- load tracker -->
+  <node name="tracker" pkg="openni_tracker" type="openni_tracker"/>
+  
+  <!-- load connector -->
+  <node name="instruction_recognition" pkg="s_dealer" type="instruction_recognition.py"/>
+
+  <!-- load communicator -->
+  <node name="communicator" pkg="s_dealer" type="communicator.py"/>
+
+</launch>

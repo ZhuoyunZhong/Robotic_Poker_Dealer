@@ -143,7 +143,7 @@ def det_areas(rgb_image, pc2, loc):
         
         # See whether the player is sitting on the left or right
         if player_loc[3] < 470:
-            info.append(0) # 0 represents left
+            info.append(2) # 2 represents left
         else:
             info.append(1) # 1 represents right
 
@@ -171,13 +171,14 @@ def det_areas(rgb_image, pc2, loc):
         array_face = face_loc.to_array()
         face_camera_coord = np.average(array_face, axis=0)
         # Transform from camera coordinate to table coordinate
-        face_table_coord = np.dot(homo_matrix, np.append(face_camera_coord, 1))
+        face_table_coord = np.dot(np.linalg.inv(homo_matrix), np.append(face_camera_coord, 1))
+        
         # The displacement information
-        if info[0]:
+        if info[0] == 1:
             displacement = face_table_coord[1]
         else:
             displacement = face_table_coord[0]
-        info.append(displacement)
+        info.append(int(displacement*1000))
 
         # Save result
         players_info.append(info)
@@ -186,8 +187,12 @@ def det_areas(rgb_image, pc2, loc):
         # For debugging
         ax.scatter(face_camera_coord[0], face_camera_coord[1], face_camera_coord[2], zdir='z', c= 'yellow')
         ax.scatter(array_face[:,0], array_face[:,1], array_face[:,2], zdir='z', c= 'orange')
-
+    
     plt.show() # For debugging '''
+    players_arr = np.array(players_info)
+    index = np.lexsort((players_arr[:,1], players_arr[:,0]))
+    players_info = players_arr[index].tolist()
+
     return players_info
 
 
