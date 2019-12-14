@@ -6,7 +6,7 @@ This project is to develop a card dealing robot arm for a Texas Hold'em game. Th
 
 <p align="center">
   	<a href="https://www.youtube.com/watch?v=aiAAWjXFiTY">
-  		<img src="https://img.youtube.com/vi/aiAAWjXFiTY/0.jpg"/>
+  		<img src="https://img.youtube.com/vi/aiAAWjXFiTY/3.jpg"/>
 	</a>
 </p>
 
