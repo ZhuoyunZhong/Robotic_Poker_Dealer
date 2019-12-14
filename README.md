@@ -5,8 +5,8 @@ This project is to develop a card dealing robot arm for a Texas Hold'em game. Th
 #### Video Demonstration
 
 <p align="center">
-  	<a href="https://www.youtube.com/watch?v=TODO">
-  		<img src="https://img.youtube.com/vi/TODO/0.jpg"/>
+  	<a href="https://www.youtube.com/watch?v=aiAAWjXFiTY">
+  		<img src="https://img.youtube.com/vi/aiAAWjXFiTY/0.jpg"/>
 	</a>
 </p>
 
