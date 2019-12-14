@@ -1,14 +1,10 @@
-# Robotic Texas Hold'em Dealer
+Robotic Texas Hold'em Dealer
 
 This project is to develop a card dealing robot arm for a Texas Hold'em game. The basic rule of the game can be viewed on [Wikipedia Texas Hold'em](https://en.wikipedia.org/wiki/Texas_hold_%27em).
 
 #### Video Demonstration
 
-<p align="center">
-  	<a href="https://www.youtube.com/watch?v=aiAAWjXFiTY">
-  		<img src="demonstration/cover.png"/>
-	</a>
-</p>
+[![Cover](demonstration/cover.png)](https://www.youtube.com/watch?v=aiAAWjXFiTY)
 
 ## Platform
 
